@@ -1,0 +1,28 @@
+ 
+ <style>
+     .bg-mine{
+         background:url("https://media.wired.com/photos/5ba1f4f40a8e1d59b69ba24e/master/w_4850,c_limit/superhero_name_archs-02.jpg");
+         background-repeat: repeat;
+        background-size: cover;
+          background-position: center;
+          opacity:.8;
+
+     }
+ </style>
+ 
+ <nav class="navbar navbar-expand-lg navbar-dark bg-mine">
+        <div class="m-4 container">
+            <a class="navbar-brand" href="/main">Look for a hero..</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <form class="form-inline ml-auto" asp-controller="Home" asp-action="Hero">
+                    <div class="md-form my-0">
+                        <input class="form-control typeahead" type="text" autocomplete="off" name="searchString" placeholder="Search" aria-label="Search">
+                    </div>
+                    <button href="#!" class="btn btn-dark btn-outline-light btn-md my-0 ml-sm-2" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>

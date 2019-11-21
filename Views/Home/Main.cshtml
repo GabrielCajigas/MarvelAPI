@@ -1,0 +1,29 @@
+<partial  name="_Search" />
+
+<div class=" mt-2 container border">
+    
+    <h1 class="display-2 text-center">All your Heroes</h1>
+    @{
+        foreach(var heroes in ViewBag.Heroes)
+        {
+            if(heroes.usuario == ViewBag.User)
+            {
+            
+    <div class=" d-inline-block  m-2 col-sm-3 mb-4">
+        <div class="card h-100">
+            <a href="/delete/@heroes.Id" class="p-2 float-left">X</a>
+            <div class="card-body">
+                <h4 class="card-title">@heroes.Name </h4>
+                <p class="card-text">@heroes.Description </p>
+            </div>
+            <div class="card-footer">
+                <a href="https://comicstore.marvel.com/search?search=@heroes.Name" target="_blank" class="comicbutton comicbutton-accent">More info about @heroes.Name</a>
+            </div>
+        </div>
+    </div>
+          }
+         }
+       }
+    </div>
+
+

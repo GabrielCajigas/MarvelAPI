@@ -1,0 +1,26 @@
+@model M_app.MarvelApi.Character
+
+ <partial  name="_Search" />
+<!--Hero Title Card-->
+<div class="row m-1 py-3">
+    <div class="col-md-4">
+        <img class="img-responsive rounded mb-lg-0 box box0 " src="@(String.Format("{0}.{1}", Model.Thumbnail.Path, Model.Thumbnail.Extension))" style="width:100%" alt="">
+    </div>
+    <!-- /.col-md-8 -->
+    <div class="m-2 col-md-7">
+        <div class="card box box0 h-100 mt-lg-0 ">
+            <div class="card-title  m-3">
+                <h1 class="">@Model.Name</h1>
+            </div>
+            <div class="card-body">
+                <p>@Model.Description</p>
+            </div>
+        </div>
+    </div>
+    <form asp-controller="Home" asp-action="Add">
+         <input type="hidden"  name="heroname" value="@Model.Name">
+        <input type="submit"  value="Add" class="btn btn-info m-1">
+    </form>
+    <!-- /.col-md-4 -->
+</div>
+
